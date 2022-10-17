@@ -1,0 +1,49 @@
+.containerdad {
+
+    display: grid;
+    background-image: linear-gradient(rgb(229, 226, 226), rgb(32, 32, 32));
+    border: black 3px solid;
+    width: 5CM;
+    height: 9CM;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 5%;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding-left: 13px;
+
+}
+
+.item {
+    border: black 1px solid;
+    background-image: linear-gradient(white, black);
+    position: center;
+    width: 1cm;
+    height: 1cm;
+    transition: 0.3s;
+
+}
+
+.itemOperation {
+    border: black 1px solid;
+    background-color: rgb(19, 14, 14);
+    width: 1cm;
+    height: 1cm;
+    background-image: linear-gradient(white, black);
+    transition: 0.3s;
+}
+
+.item:hover,
+.itemOperation:hover {
+    background-image: linear-gradient(rgb(122, 118, 118), black);
+}
+
+input {
+    border: 3px black solid;
+    border-radius: 10%;
+}
