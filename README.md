@@ -1,2 +1,2 @@
-# Calculadora
-O primeiro projeto da minha vida, uma calculadora amadora feita em HTML, CSS E JS puro. Pode não ser um super projeto, mas sem duvidas vou guardar e lembrar dele pra sempre por ser o primeiro.
+# Calculator
+Just an amateur calculator. Not the best project, but the first i've ever made in my life, so i'll keep this here and someday i'll probably see it and realize how much i've evolved. 
