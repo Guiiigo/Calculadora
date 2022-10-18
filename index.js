@@ -63,7 +63,7 @@ function tap(givenid) {
 
             case "square":
                 if (this.IsLastOperation == false) {
-                    inputVisual.value += "^";
+                    inputVisual.value += "**";
                 }
                 noRepeat(givenid);
                 break;
@@ -80,12 +80,23 @@ function tap(givenid) {
                 break;
 
                 case "leftparentesis":
-                    if (this.IsLastOperation == false) {
-                        inputVisual.value += "^";
+                        inputVisual.value += "(";
                         noRepeat();
-                    }
 
                 break;
+
+                case "rightparentesis": 
+                        inputVisual.value += ")";
+                        noRepeat();
+
+                break;
+
+                case "erase": 
+                let inputV = inputVisual.value
+                inputVisual.value = inputVisual.value.substring((0),(inputVisual.value.length-1))
+                noRepeat();
+
+        break;
         }
 
     }
