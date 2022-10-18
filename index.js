@@ -79,29 +79,85 @@ function tap(givenid) {
                 noRepeat();
                 break;
 
-                case "leftparentesis":
-                        inputVisual.value += "(";
-                        noRepeat();
-
-                break;
-
-                case "rightparentesis": 
-                        inputVisual.value += ")";
-                        noRepeat();
-
-                break;
-
-                case "erase": 
-                let inputV = inputVisual.value
-                inputVisual.value = inputVisual.value.substring((0),(inputVisual.value.length-1))
+            case "leftparentesis":
+                inputVisual.value += "(";
                 noRepeat();
 
-        break;
+                break;
+
+            case "rightparentesis":
+                inputVisual.value += ")";
+                noRepeat();
+
+                break;
+
+            case "erase":
+                let inputV = inputVisual.value
+                inputVisual.value = inputVisual.value.substring((0), (inputVisual.value.length - 1))
+                noRepeat();
+
+                break;
         }
 
     }
 }
 
+document.addEventListener("keydown", function (e) {
+    console.log(e.key);
+})
 
+document.addEventListener("keydown", function (e) {
+    if (!isNaN(e.key)) {
+        tap(e.key)
+    }
+    else
+    {
+        switch (e.key) {
+            case "+":
+                tap("sum")
+                e.preventDefault();
+                break;
+
+            case "-":
+                tap("minus")
+                break;
+
+            case "%":
+                tap("module")
+                break;
+
+            case "(":
+                tap("leftparentesis")
+                break;
+
+            case ")":
+                tap("rightparentesis")
+                break;
+
+            case "Backspace":
+                tap("erase")
+                break;
+
+            case "c":
+                tap("clear")
+                break;
+
+            case ")":
+                tap("rightparentesis")
+                break;
+            case "*":
+                tap("multiplication")
+                break;
+            case "/":
+                tap("division")
+                break;
+
+            case "Enter":
+                tap("result")
+                break;
+
+            }
+    }
+})
 
 
